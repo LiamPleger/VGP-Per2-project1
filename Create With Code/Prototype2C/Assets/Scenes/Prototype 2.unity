@@ -524,11 +524,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &535268420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4346853165377627646, guid: c0ebcbf6235abed479f1b36cfb643b75, type: 3}
-  m_PrefabInstance: {fileID: 167321547}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &898998448
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,9 +554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 535268420}
-  - {fileID: 1189329135}
-  - {fileID: 1936904703}
+  - {fileID: 4346853165377627646, guid: c0ebcbf6235abed479f1b36cfb643b75, type: 3}
+  - {fileID: 6322851603916878380, guid: edfc0c30233a6924d971786580726877, type: 3}
+  - {fileID: 3520774688243253086, guid: 5b6a2eee00ea67d4e97094fc2b8a20cf, type: 3}
+  animalIndex: 0
 --- !u!4 &898998450
 Transform:
   m_ObjectHideFlags: 0
@@ -725,11 +721,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6a2eee00ea67d4e97094fc2b8a20cf, type: 3}
---- !u!1 &1189329135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6322851603916878380, guid: edfc0c30233a6924d971786580726877, type: 3}
-  m_PrefabInstance: {fileID: 926934386}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1391779515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,11 +882,6 @@ MonoBehaviour:
   speed: 10
   xRange: 10
   projectilePrefab: {fileID: 1124060112466105368, guid: c86722c3c3d22c645bd8a8e3eae387a6, type: 3}
---- !u!1 &1936904703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3520774688243253086, guid: 5b6a2eee00ea67d4e97094fc2b8a20cf, type: 3}
-  m_PrefabInstance: {fileID: 1112879900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1124060111178308370
 PrefabInstance:
   m_ObjectHideFlags: 0
