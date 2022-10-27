@@ -579,22 +579,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2763595607549184712, guid: edfc0c30233a6924d971786580726877, type: 3}
-      propertyPath: m_Size.x
-      value: 0.09742244
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763595607549184712, guid: edfc0c30233a6924d971786580726877, type: 3}
-      propertyPath: m_Size.y
-      value: 0.2251666
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763595607549184712, guid: edfc0c30233a6924d971786580726877, type: 3}
-      propertyPath: m_Center.x
-      value: -0.004989515
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763595607549184712, guid: edfc0c30233a6924d971786580726877, type: 3}
-      propertyPath: m_Center.y
-      value: 0.08825626
-      objectReference: {fileID: 0}
     - target: {fileID: 6322851603916878380, guid: edfc0c30233a6924d971786580726877, type: 3}
       propertyPath: m_Name
       value: Dog_Beagle_01

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Variables
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 10.0f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Move the player
         if (transform.position.x < -xRange) {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
