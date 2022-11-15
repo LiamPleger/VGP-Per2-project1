@@ -27,5 +27,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         // Turn the car left or right
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+
     }
 }
