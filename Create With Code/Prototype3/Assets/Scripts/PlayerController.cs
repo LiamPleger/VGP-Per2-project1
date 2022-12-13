@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip crashSound;
     public float jumpForce = 10;
+    public float doubleJumpForce = 5;
     public float gravityModifier;
     public bool isOnGround = true;
+    public bool doubleJump = true;
     public bool gameOver;
     // Start is called before the first frame update
     void Start()
@@ -34,10 +36,18 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
        }
+        else if(Input.GetKeyDown(KeyCode.Space) && doubleJump && !gameOver) {
+            playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+            doubleJump = false;
+            playerAnim.SetTrigger("Jump_trig");
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+       }
     }
     private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.CompareTag("Ground")) {
             isOnGround = true;
+            doubleJump = true;
             dirtParticle.Play();
         }
         else if(collision.gameObject.CompareTag("Obstacle")) {
