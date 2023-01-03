@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 637124564}
   - component: {fileID: 637124563}
   m_Layer: 0
-  m_Name: Package_Pu
+  m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 1453471853}
   - component: {fileID: 1453471852}
   m_Layer: 0
-  m_Name: Package_R
+  m_Name: Magnetic Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 1644456042}
   - component: {fileID: 1644456041}
   m_Layer: 0
-  m_Name: Package_G
+  m_Name: TV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Private Variables
     private float speed = 10.0f;
-    private float turnSpeed = 25.0f;
+    //private float turnSpeed = 65.0f;
     private float horizontalInput;
     private float forwardInput;
 
@@ -25,8 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
         // Move the vehicle forward or back
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        // Turn the car left or right
-        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+        // Move the car left or right
+        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+        //transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
 
     }
 }
