@@ -6,10 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     //Private Variables
     private float speed = 10.0f;
-    //private float turnSpeed = 65.0f;
+    private float turnSpeed = 65.0f;
     private float horizontalInput;
     private float forwardInput;
-
+    private float right = -1;
+    private float left = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
         // Move the car left or right
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
         //transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-
+        if (Input.GetKey(KeyCode.Q)) {
+            transform.Rotate(Vector3.up, turnSpeed * right * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.E)) {
+            transform.Rotate(Vector3.up, turnSpeed * left * Time.deltaTime);
+        }
     }
 }
