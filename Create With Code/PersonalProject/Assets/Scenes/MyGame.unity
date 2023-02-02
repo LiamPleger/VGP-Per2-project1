@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 554293881}
   m_Layer: 0
   m_Name: TV DropBox
-  m_TagString: Untagged
+  m_TagString: TV Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 956855686}
   m_Layer: 0
   m_Name: Conveyor Belt
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 1068684179}
   m_Layer: 0
   m_Name: Vase DropBox
-  m_TagString: Untagged
+  m_TagString: Vase Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 1924522935}
   m_Layer: 0
   m_Name: Exit Box Red
-  m_TagString: Untagged
+  m_TagString: Flame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

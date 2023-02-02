@@ -8,6 +8,9 @@ TagManager:
   - TV
   - Vase
   - TV Drop
+  - Belt
+  - Vase Drop
+  - Flame
   layers:
   - Default
   - TransparentFX
