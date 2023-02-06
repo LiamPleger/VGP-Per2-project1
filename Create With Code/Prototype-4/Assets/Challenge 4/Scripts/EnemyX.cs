@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyX : MonoBehaviour
 {
-    public float speed;
+    public float speed = 5;
     private Rigidbody enemyRb;
     private GameObject playerGoal;
     private SpawnManagerX spawnManagerXScript;
@@ -23,7 +23,7 @@ public class EnemyX : MonoBehaviour
     {
         // Set enemy direction towards player goal and move there
         Vector3 lookDirection = (playerGoal.transform.position - transform.position).normalized;
-        enemyRb.AddForce(lookDirection * speed);
+        enemyRb.AddForce(lookDirection * speed * Time.deltaTime);
 
     }
 
