@@ -11,6 +11,7 @@ TagManager:
   - Belt
   - Vase Drop
   - Flame
+  - Wall
   layers:
   - Default
   - TransparentFX
