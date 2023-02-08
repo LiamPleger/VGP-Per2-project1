@@ -8,8 +8,8 @@ public class SpawnItems : MonoBehaviour
     private float spawnRangeX = -18.0f;
     private float spawnPosZ = 0.0f;
     private float height = .9f;
-    private float startDelay = 2.0f;
-    private float spawnInterval = 3.0f;
+    private float startDelay = 2.5f;
+    private float spawnInterval = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
