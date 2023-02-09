@@ -31,7 +31,14 @@ public class MoveLeft : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        if (gameObject.CompareTag("TV") && other.gameObject.CompareTag("TV Drop"))
+        {
+            Destroy(gameObject);
+        }
+        if (gameObject.CompareTag("Vase") && other.gameObject.CompareTag("Vase Drop"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
