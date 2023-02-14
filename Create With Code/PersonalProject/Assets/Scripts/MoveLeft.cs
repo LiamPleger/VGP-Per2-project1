@@ -18,25 +18,20 @@ public class MoveLeft : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other) {
-        if (other.gameObject.CompareTag("Belt"))
-        {
+        if (other.gameObject.CompareTag("Belt")) {
             transform.Translate(Vector3.right * Time.deltaTime * speed);
         } 
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
        
-        if (other.gameObject.CompareTag("Flame"))
-        {
+        if (other.gameObject.CompareTag("Flame")) {
             Destroy(gameObject);
         }
-        if (gameObject.CompareTag("TV") && other.gameObject.CompareTag("TV Drop"))
-        {
+        if (gameObject.CompareTag("TV") && other.gameObject.CompareTag("TV Drop")) {
             Destroy(gameObject);
         }
-        if (gameObject.CompareTag("Vase") && other.gameObject.CompareTag("Vase Drop"))
-        {
+        if (gameObject.CompareTag("Vase") && other.gameObject.CompareTag("Vase Drop")) {
             Destroy(gameObject);
         }
     }
