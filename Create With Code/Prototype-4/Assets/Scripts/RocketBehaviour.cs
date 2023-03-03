@@ -12,7 +12,7 @@ public class RocketBehaviour : MonoBehaviour
 
     // Start is called before the first frame update
     public void Fire(Transform newTarget) {
-    target = homingTarget;
+    target = newTarget;
     homing = true;
     Destroy(gameObject, aliveTimer);
     }
