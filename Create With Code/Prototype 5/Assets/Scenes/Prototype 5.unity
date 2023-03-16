@@ -1072,6 +1072,7 @@ MonoBehaviour:
   - {fileID: 6501080517205868089, guid: 332a2aae102d18848b106a6a2b1fa68d, type: 3}
   - {fileID: 6203596426387898593, guid: 1540624eecd5bbe42825bf051fb498d9, type: 3}
   scoreText: {fileID: 1945855991}
+  gameOverText: {fileID: 904730121}
 --- !u!4 &2080092341
 Transform:
   m_ObjectHideFlags: 0
