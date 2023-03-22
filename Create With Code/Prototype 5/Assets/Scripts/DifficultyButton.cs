@@ -22,7 +22,7 @@ public class DifficultyButton : MonoBehaviour
         
     }
     void SetDifficulty() {
-        Debug.Log(gameObject.name + " was clicked");
+        //Debug.Log(gameObject.name + " was clicked");
         //The argument send the difficulty to the StartGame
         gameManager.StartGame(difficulty);
     }
