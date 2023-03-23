@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI livesText;
     public bool isGameActive;
     public List<GameObject> targets;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public GameObject titleScreen;
+    private int lives;
     private float spawnRate = 1.0f;
     private int score;
 
@@ -37,6 +39,13 @@ public class GameManager : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
+    public void UpdateLives(int livesToChange) {
+        lives += livesToChange;
+        livesText.text = "Lives: " + lives;
+        if (lives <= 0) {
+            GameOver();
+        }
+    }
     public void GameOver() {
         restartButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
@@ -50,6 +59,7 @@ public class GameManager : MonoBehaviour
         isGameActive = true;
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
+        UpdateLives(3);
         titleScreen.gameObject.SetActive(false);
     }
 }
