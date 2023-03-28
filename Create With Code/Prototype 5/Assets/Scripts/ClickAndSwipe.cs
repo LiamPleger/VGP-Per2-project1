@@ -52,9 +52,10 @@ public class ClickAndSwipe : MonoBehaviour
         col.enabled = swiping;
     }
 
-    void OnCollisionEnter(Collision, collision) {
+    void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.GetComponent<Target>()) {
-            gameObject.Destroy();
+            //Destroy the Target
+            collision.gameObject.GetComponent<Target>().DestroyTarget();
         }
     }
 }
