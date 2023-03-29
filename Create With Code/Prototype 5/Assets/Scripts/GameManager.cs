@@ -1,3 +1,5 @@
+//Using statements are like import statements they bring code in from another program into your program.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +8,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
+    //Variables
     public GameObject pauseScreen;
     public TextMeshProUGUI livesText;
-    public bool isGameActive;
+    public bool isGameActive; //bool is short for boolean
     public List<GameObject> targets;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if user presses P key
         if (Input.GetKeyDown(KeyCode.P)) {
             ChangePaused();
         }
@@ -39,17 +43,22 @@ public class GameManager : MonoBehaviour
             Instantiate(targets[index]);
         }
     }
+    //This is  Method header or method signiture for UpdateScore and has the parameter scoreToAdd
     public void UpdateScore(int scoreToAdd) {
+        //+= is like score = score + scoreToAdd
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
     public void UpdateLives(int livesToChange) {
         lives += livesToChange;
         livesText.text = "Lives: " + lives;
+        //tells us when to end the game if we are out of lives
         if (lives <= 0) {
+            //this is a method call, we are "calling" GameOver() 
             GameOver();
         }
     }
+    //this is a method with no parameter
     public void GameOver() {
         restartButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);

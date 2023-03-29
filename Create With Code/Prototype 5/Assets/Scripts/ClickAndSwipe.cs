@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class ClickAndSwipe : MonoBehaviour
 {
+    //so we can access GameManager
     private GameManager gameManager;
     private Camera cam;
+    //Contains x, y, and z
     private Vector3 mousePos;
     private TrailRenderer trail;
     private BoxCollider col;
@@ -20,7 +22,7 @@ public class ClickAndSwipe : MonoBehaviour
         col = GetComponent<BoxCollider>();
         trail.enabled = false;
         col.enabled = false;
-
+        //this "finds" the GameManager script so we can use public variables and methods from it
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 

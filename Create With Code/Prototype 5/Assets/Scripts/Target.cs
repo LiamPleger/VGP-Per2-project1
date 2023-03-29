@@ -42,7 +42,9 @@ public class Target : MonoBehaviour
 */
     private void OnTriggerEnter(Collider other) {
         Destroy(gameObject);
+        //this checks if it is good but this could also be acomplished with a ! which means not
         if (gameObject.CompareTag("Good") && gameManager.isGameActive) {
+            //call to the UpdateLives() method in GameManager and -1 is the argument
             gameManager.UpdateLives(-1);
         }
     }
