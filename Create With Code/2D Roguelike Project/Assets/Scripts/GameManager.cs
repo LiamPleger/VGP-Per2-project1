@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private BoardManager boardScript;
     //Current level number, expressed in game as "Day  1".
     private int level = 3;
+    public int playerFoodPoints = 100;
+    [HideInInspector] public bool playersTurn = true;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -44,7 +46,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    public void GameOver() {
+        enabled = false;
+    }
 
     //Update is called every frame.
     void Update()
