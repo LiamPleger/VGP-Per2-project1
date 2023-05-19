@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;        //Allows us to use SceneManager
+using UnityEngine.UI;
 
     //Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
     public class Player : MovingObject
@@ -13,6 +14,8 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
         public int pointsPerSoda = 20;
         //How much damage a player does to a wall whne chopping it.
         public int wallDamage = 1;
+
+        public Text foodText;
 
         //Used to store a refrence to the Player's animator component
         private Animator animator;
@@ -28,6 +31,7 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
 
             //Get the current food point total stored in GameManager.instance between levels.
             food = GameManager.instance.playerFoodPoints;
+            foodText.text = "Food: " + food;
 
             //Call the Start function of the MovingObject base class.
             base.Start ();
@@ -78,6 +82,7 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
         {
             //Every time player moves, subtract from food points total.
             food--;
+            foodText.text = "Food: " + food;
 
             //Call the AttemptMove method of the base class, passing in the component T (in this case Wall) and x and y direction to move.
             base.AttemptMove <T> (xDir, yDir);
@@ -132,6 +137,7 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
             {
                 //Add pointsPerFood to the players current food total.
                 food += pointsPerFood;
+                foodText.text = "+" + pointsPerFood + " Food: " + food;
 
                 //Disable the food object the player collided with.
                 other.gameObject.SetActive (false);
@@ -142,6 +148,8 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
             {
                 //Add pointsPerSoda to players food points total
                 food += pointsPerSoda;
+                foodText.text = "+" + pointsPerSoda + " Food: " + food;
+                
 
 
                 //Disable the soda object the player collided with.
@@ -167,6 +175,7 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
 
             //Subtract lost food points from the players total.
             food -= loss;
+            foodText.text = "-" + loss + " Food: " + food;
 
             //Check to see if game has ended.
             CheckIfGameOver ();
