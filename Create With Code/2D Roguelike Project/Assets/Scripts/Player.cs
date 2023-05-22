@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;        //Allows us to use SceneManager
 using UnityEngine.UI;
+using TMPro;
 
     //Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
     public class Player : MovingObject
@@ -10,12 +11,12 @@ using UnityEngine.UI;
         public float restartLevelDelay = 1f;
         //Number of points to add to player food points when picking up a food object.
         public int pointsPerFood = 10;
-        //Number of points to add to player food points whne picking up a soda object.
+        //Number of points to add to player food points when picking up a soda object.
         public int pointsPerSoda = 20;
-        //How much damage a player does to a wall whne chopping it.
+        //How much damage a player does to a wall when chopping it.
         public int wallDamage = 1;
 
-        public Text foodText;
+        public TextMeshProUGUI foodText;
 
         //Used to store a refrence to the Player's animator component
         private Animator animator;
