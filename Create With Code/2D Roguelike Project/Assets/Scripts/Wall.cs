@@ -12,6 +12,8 @@ public class Wall : MonoBehaviour
 
     //Store a component reference to the attached SpriteRenderer.
     private SpriteRenderer spriteRenderer;
+    public AudioClip chopSound1;
+    public AudioClip chopSound2;
 
     void Awake ()
     {
@@ -23,6 +25,7 @@ public class Wall : MonoBehaviour
     //DamageWall is called when the player attacks a wall.
     public void DamageWall (int loss)
     {
+        SoundManager.instance.RandomizeSfx(chopSound1, chopSound2);
         //Set spriteRenderer to the damaged wall sprite.
         spriteRenderer.sprite = dmgSprite;
 
